@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "sql_format"
+version = "0.0.1"
+description = "A simple command to format a single line SQL query into a multi-line SQL query"
+authors = ["George Mayko <mayko.george@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.scripts]
+sql-format = "sql_format.main:app"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+typer = {extras = ["all"], version = "^0.4.1"}
+requests = "^2.27.1"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
